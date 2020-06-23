@@ -9,33 +9,25 @@ Our current build limits are:
 
 .. tabs::
 
-.. tab:: \|org_brand\|
+  .. tab:: \|org_brand\|
 
-\* 15 minutes build time
+     * 15 minutes build time
+     * 3GB of memory
+     * 2 concurrent builds
 
-\* 3GB of memory
+     We can increase build limits on a per-project basis.
 
-\* 2 concurrent builds
+     Send an email to support@readthedocs.org providing a good reason why your documentation needs more resources.
 
-We can increase build limits on a per-project basis.
+     If your business is hitting build limits hosting documentation on ReadtheDocs, please consider :doc:`Read the Docs for Business </commercial/index>\` which has much higher build resources.
 
-Send an email to support@readthedocs.org providing a good reason why
-your documentation needs more resources.
+  .. tab:: \|com_brand\|
 
-If your business is hitting build limits hosting documentation on Read
-the Docs, please consider :doc:`Read the Docs for Business </commercial/index>\`
-which has much higher build resources.
+     * 30 minutes build time
+     * 7GB of memory
+     * 4 concurrent builds
 
-.. tab:: \|com_brand\|
-
-\* 30 minutes build time
-
-\* 7GB of memory
-
-\* 4 concurrent builds
-
-If you are having trouble with your documentation builds,
-you can reach our support at support@readthedocs.com.
+    If you are having trouble with your documentation builds, you can reach our support at support@readthedocs.com.
 
 Understanding what's going on
 =============================

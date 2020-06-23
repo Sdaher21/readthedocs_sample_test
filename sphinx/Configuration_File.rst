@@ -15,60 +15,39 @@ options:
 
 .. code:: yaml
 
-# .readthedocs.yml
+   # .readthedocs.yml
+   # Read the Docs configuration file
+   # See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+   
+   # Required
+     version: 2
 
-# Read the Docs configuration file
+   # Build documentation in the docs/ directory with Sphinx
+     sphinx: 
+	   configuration: docs/conf.py
+	   
+   # Build documentation with MkDocs
+   # mkdocs:
+   #   configuration: mkdocs.yml
+   
+   # Optionally build your docs in additional formats such as PDF
+     formats:
+      - pdf
 
-# See https://docs.readthedocs.io/en/stable/config-file/v2.html for
-details
+   # Optionally set the version of Python and requirements required to build your docs
+     python:
+      version: 3.7
 
-# Required
-
-version: 2
-
-# Build documentation in the docs/ directory with Sphinx
-
-sphinx:
-
-configuration: docs/conf.py
-
-# Build documentation with MkDocs
-
-#mkdocs:
-
-# configuration: mkdocs.yml
-
-# Optionally build your docs in additional formats such as PDF
-
-formats:
-
-- pdf
-
-# Optionally set the version of Python and requirements required to
-build your docs
-
-python:
-
-version: 3.7
-
-install:
-
-- requirements: docs/requirements.txt
+    install:
+     - requirements: docs/requirements.txt
 
 Supported settings
 ==================
 
 Read the Docs validates every configuration file.
 
-Any configuration option that isn't supported will make the build fail.
+Any configuration option that isn't supported will make the build fail. This is to avoid typos and provide feedback on invalid configurations.
 
-This is to avoid typos and provide feedback on invalid configurations.
-
-.. contents::
-
-:local:
-
-:depth: 1
 
 version
 
@@ -640,9 +619,7 @@ See :ref:`config-file/v2:python.system_packages`.
 
 .. warning::
 
-Some values from the web interface are no longer respected,
-
-please see :ref:`config-file/v2:Migrating from the web interface\` if
+Some values from the web interface are no longer respected, please see :ref:`config-file/v2:Migrating from the web interface\` if
 you have settings there.
 
 New settings

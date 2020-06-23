@@ -1,6 +1,7 @@
+****************************
 Importing Your Documentation
+****************************
 
-============================
 
 .. meta::
 
@@ -46,8 +47,7 @@ documentation>`.
 Importing a repository
 
 Manually import your docs
-
--------------------------
+=========================
 
 If you do not have a connected account, you will need to select
 \**Import Manually*\*
