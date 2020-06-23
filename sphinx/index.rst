@@ -6,6 +6,8 @@
 Welcome to Sample Project's documentation!
 ==========================================
 
+This is the sample project to test ReadtheDocs with Sphinx and Github.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
