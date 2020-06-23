@@ -14,8 +14,8 @@ This is the sample project to test ReadtheDocs with Sphinx and Github.
    
    /Importing_Documentation
    /Build_Process
-   /Configuration_File
    /features
+   /Configuration_File
    /webhooks
 
 
