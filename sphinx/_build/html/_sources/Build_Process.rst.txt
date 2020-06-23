@@ -23,10 +23,7 @@ Send an email to support@readthedocs.org providing a good reason why
 your documentation needs more resources.
 
 If your business is hitting build limits hosting documentation on Read
-the Docs,
-
-please consider :doc:`Read the Docs for Business </commercial/index>\`
-
+the Docs, please consider :doc:`Read the Docs for Business </commercial/index>\`
 which has much higher build resources.
 
 .. tab:: \|com_brand\|
@@ -38,47 +35,30 @@ which has much higher build resources.
 \* 4 concurrent builds
 
 If you are having trouble with your documentation builds,
-
 you can reach our support at support@readthedocs.com.
 
 Understanding what's going on
 =============================
 
-Understanding how Read the Docs builds your project will help you with
-debugging the problems you have with the site.
+Understanding how Read the Docs builds your project will help you with debugging the problems you have with the site.
 
-It should also allow you to take advantage of certain things that happen
-during the build process.
+It should also allow you to take advantage of certain things that happen during the build process.
 
-The first step of the process is that we check out your code from the
-repository you have given us.
+The first step of the process is that we check out your code from the repository you have given us.
 
-If the code is already checked out, we update the copy to the branch
-that you have specified in your project's configuration.
+If the code is already checked out, we update the copy to the branch that you have specified in your project's configuration.
 
-Then we build the proper backend code for the type of documentation
-you've selected,
+Then we build the proper backend code for the type of documentation you've selected, this is done inside a :ref:`Docker container <builds:Docker images>`.
 
-this is done inside a :ref:`Docker container <builds:Docker images>`.
+At this point, if you need extra requirements, or even install your own package in the virtual environment to build your documentation, you can use a :doc:`config-file/index`.
 
-At this point, if you need extra requirements,
-
-or even install your own package in the virtual environment to build
-your documentation,
-
-you can use a :doc:`config-file/index`.
-
-When we build your Sphinx documentation, we run \``sphinx-build -b
-<format> . \_build/<format>`\`
+When we build your Sphinx documentation, we run \``sphinx-build -b <format> . \_build/<format>`\`
 
 We also create pdf's and ePub's automatically based on your project.
 
 For MkDocs, we run \``mkdocs build``.
 
-Once these files are built,
-
-they are deployed to our file hosting backend and will be visible to
-users.
+Once these files are built, they are deployed to our file hosting backend and will be visible to users.
 
 An example in code:
 
@@ -102,23 +82,17 @@ deploy_docs(version)
 
 .. note::
 
-Regardless of whether you build your docs with Sphinx or MkDocs,
+Regardless of whether you build your docs with Sphinx or MkDocs, we recommend you pin the version of Sphinx or Mkdocs you want us to use.
 
-we recommend you pin the version of Sphinx or Mkdocs you want us to use.
+You can do this the same way other :doc:`dependencies are specified <guides/specifying-dependencies>`.
 
-You can do this the same way other
-
-:doc:`dependencies are specified <guides/specifying-dependencies>`.
-
-Some examples of pinning versions might be \``sphinx<2.0`\` or
-\``mkdocs>=1.0``.
+Some examples of pinning versions might be \``sphinx<2.0`\` or \``mkdocs>=1.0``.
 
 Build environment
 
 -----------------
 
-The \*Sphinx\* and \*Mkdocs\* builders set the following RTD-specific
-environment variables when building your documentation:
+The \*Sphinx\* and \*Mkdocs\* builders set the following RTD-specific environment variables when building your documentation:
 
 .. csv-table:: Environment Variables
 
@@ -157,14 +131,8 @@ Docker images
 
 -------------
 
-The build process is executed inside Docker containers,
+The build process is executed inside Docker containers, by default the image used is \``readthedocs/build:latest``, but you can change that using a :doc:`/config-file/index`.
 
-by default the image used is \``readthedocs/build:latest``,
+You can see the current Docker build images that we use in our \`docker repository <https://github.com/readthedocs/readthedocs-docker-images>`_.
 
-but you can change that using a :doc:`/config-file/index`.
-
-You can see the current Docker build images that we use in our \`docker
-repository <https://github.com/readthedocs/readthedocs-docker-images>`_.
-
-\`Docker Hub <https://hub.docker.com/r/readthedocs/build/>`\_ also shows
-the latest set of images that have been built.
+\`Docker Hub <https://hub.docker.com/r/readthedocs/build/>`\_ also shows the latest set of images that have been built.
