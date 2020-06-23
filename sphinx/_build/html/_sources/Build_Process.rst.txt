@@ -1,6 +1,7 @@
+*************
 Build Process
+*************
 
-=============
 
 Every documentation build has limited resources.
 
@@ -41,8 +42,7 @@ If you are having trouble with your documentation builds,
 you can reach our support at support@readthedocs.com.
 
 Understanding what's going on
-
------------------------------
+=============================
 
 Understanding how Read the Docs builds your project will help you with
 debugging the problems you have with the site.
