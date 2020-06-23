@@ -14,13 +14,9 @@ Automatic Documentation Deployment
 ----------------------------------
 
 We integrate with GitHub, BitBucket, and GitLab.
-
 We automatically create webhooks in your repository, which tell us whenever you push a commit.
-
 We will then build and deploy your docs every time you push a commit. This enables a workflow that we call \*Continuous Documentation*:
-
 \**Once you set up your Read the Docs project, your users will always have up-to-date documentation.*\*
-
 Learn more about :doc:`/webhooks`.
 
 Custom Domains & White Labeling
