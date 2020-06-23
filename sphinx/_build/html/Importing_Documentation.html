@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; Sample Project 0.9.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Build_Process.html" />
+    <link rel="prev" title="Welcome to Sample Project’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>Importing Your Documentation</p>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">description lang=en</dt>
+<dd class="field-odd"><p>Import your existing technical documentation from</p>
+</dd>
+</dl>
+<p>version control into Read the Docs.</p>
+<p>To import a public documentation repository, visit your `Read the Docs
+dashboard`_ and click <a href="#id19"><span class="problematic" id="id20">Import_</span></a>.</p>
+<p>For private repositories, please use <span class="xref std std-doc">Read the Docs for Business</span>.</p>
+<p>If you have :doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>connected your Read the Docs account
+&lt;../connected-accounts&gt;` to GitHub, Bitbucket, or GitLab,</p>
+<p>you will see a list of your repositories that we are able to import.</p>
+<p>To import one of these projects, just click the import</p>
+<p>icon next to the repository you’d like to import. This will bring up a
+form that</p>
+<p>is already filled with your project’s information. Feel free to edit any
+of</p>
+<p>these properties, and then click **Next** to</p>
+<p><span class="xref std std-ref">build your documentation</span>.</p>
+<div class="figure align-default">
+<img alt="../_static/images/first-steps/import-a-repository.png" src="../_static/images/first-steps/import-a-repository.png" />
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">align</dt>
+<dd class="field-odd"><p>right</p>
+</dd>
+<dt class="field-even">figwidth</dt>
+<dd class="field-even"><p>300px</p>
+</dd>
+<dt class="field-odd">target</dt>
+<dd class="field-odd"><p>../_static/images/first-steps/import-a-repository.png</p>
+</dd>
+</dl>
+<p>Importing a repository</p>
+<p>Manually import your docs</p>
+<hr class="docutils" />
+<p>If you do not have a connected account, you will need to select
+**Import Manually**</p>
+<p>and enter the information for your repository yourself. You will also
+need to</p>
+<p>manually configure the webhook for your repository as well. When
+importing your</p>
+<p>project, you will be asked for the repository URL, along with some other</p>
+<p>information for your new project. The URL is normally the URL or path
+name you’d</p>
+<p>use to checkout, clone, or branch your repository. Some examples:</p>
+<p>* Git: ``https://github.com/ericholscher/django-kong.git``</p>
+<p>* Mercurial: ``https://bitbucket.org/ianb/pip``</p>
+<p>* Subversion: ``http://varnish-cache.org/svn/trunk``</p>
+<p>* Bazaar: ``lp:pasta``</p>
+<p>Add an optional homepage URL and some tags, and then click **Next**.</p>
+<p>Once your project is created, you’ll need to manually configure the
+repository</p>
+<p>webhook if you would like to have new changes trigger builds for your</p>
+<p>project on Read the Docs. Go to your project’s :guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Admin` &gt;
+:guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Integrations` page to</p>
+<p>configure a new webhook, or see :ref:<a href="#id7"><span class="problematic" id="id8">`</span></a>our steps for webhook creation
+&lt;webhooks:Webhook Creation&gt;`</p>
+<p>for more information on this process.</p>
+<p>The ``Admin`` page can be found at
+``https://readthedocs.org/dashboard/&lt;project-slug&gt;/edit/<a href="#id9"><span class="problematic" id="id10">``</span></a>.</p>
+<p>You can access all of the project settings from the admin page sidebar.</p>
+<div class="figure align-default">
+<img alt="../_static/images/first-steps/admin-panel.png" src="../_static/images/first-steps/admin-panel.png" />
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">figwidth</dt>
+<dd class="field-odd"><p>400px</p>
+</dd>
+<dt class="field-even">target</dt>
+<dd class="field-even"><p>../_static/images/first-steps/admin-panel.png</p>
+</dd>
+</dl>
+<p>Building your documentation</p>
+<hr class="docutils" />
+<p>Within a few seconds of completing the import process,</p>
+<p>your code will automatically be fetched from your public repository,</p>
+<p>and the documentation will be built.</p>
+<p>Check out our :doc:<a href="#id11"><span class="problematic" id="id12">`</span></a>/builds` page to learn more about how Read the Docs
+builds your docs,</p>
+<p>and to troubleshoot any issues that arise.</p>
+<p>Some documentation projects require additional configuration to build</p>
+<p>such as specifying a certain version of Python or installing additional
+dependencies.</p>
+<p>You can configure these settings in a ``readthedocs.yml`` file.</p>
+<p>See our :doc:<a href="#id13"><span class="problematic" id="id14">`</span></a>/config-file/index` docs for more details.</p>
+<p>It is also important to note that the default version of Sphinx is
+``v1.8.5``. If</p>
+<p>choosing to build your documentation other than this, it must be
+specified in a</p>
+<p>``requirements.txt`` file.</p>
+<p>Read the Docs will host multiple versions of your code. You can read
+more about</p>
+<p>how to use this well on our :doc:<a href="#id15"><span class="problematic" id="id16">`</span></a>/versions` page.</p>
+<p>If you have any more trouble, don’t hesitate to reach out to us.</p>
+<p>The :doc:<a href="#id17"><span class="problematic" id="id18">`</span></a>/support` page has more information on getting in touch.</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Sample Project</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webhooks.html">Webhooks</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Sample Project’s documentation!</a></li>
+      <li>Next: <a href="Build_Process.html" title="next chapter">&lt;no title&gt;</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sherin Daher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Importing_Documentation.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

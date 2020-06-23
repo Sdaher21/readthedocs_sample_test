@@ -1,0 +1,649 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;no title&gt; &#8212; Sample Project 0.9.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Features" href="features.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="Build_Process.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>Configuration File V2</p>
+<hr class="docutils" />
+<p>Read the Docs supports configuring your documentation builds with a YAML
+file.</p>
+<p>The :doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>configuration file &lt;index&gt;` must be in the root directory of
+your project.</p>
+<p>We recommend the filename ``.readthedocs.yml``.</p>
+<p>Below is an example YAML file which shows the most common configuration
+options:</p>
+<p># .readthedocs.yml</p>
+<p># Read the Docs configuration file</p>
+<p># See <a class="reference external" href="https://docs.readthedocs.io/en/stable/config-file/v2.html">https://docs.readthedocs.io/en/stable/config-file/v2.html</a> for
+details</p>
+<p># Required</p>
+<p>version: 2</p>
+<p># Build documentation in the docs/ directory with Sphinx</p>
+<p>sphinx:</p>
+<p>configuration: docs/conf.py</p>
+<p># Build documentation with MkDocs</p>
+<p>#mkdocs:</p>
+<p># configuration: mkdocs.yml</p>
+<p># Optionally build your docs in additional formats such as PDF</p>
+<p>formats:</p>
+<ul class="simple">
+<li><p>pdf</p></li>
+</ul>
+<p># Optionally set the version of Python and requirements required to
+build your docs</p>
+<p>python:</p>
+<p>version: 3.7</p>
+<p>install:</p>
+<ul class="simple">
+<li><p>requirements: docs/requirements.txt</p></li>
+</ul>
+<p>Supported settings</p>
+<hr class="docutils" />
+<p>Read the Docs validates every configuration file.</p>
+<p>Any configuration option that isn’t supported will make the build fail.</p>
+<p>This is to avoid typos and provide feedback on invalid configurations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">local</dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">depth</dt>
+<dd class="field-even"><p>1</p>
+</dd>
+</dl>
+<p>version</p>
+<hr class="docutils" />
+<dl class="field-list simple">
+<dt class="field-odd">Required</dt>
+<dd class="field-odd"><p>``true``</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>version: 2</p>
+<p>If you don’t provide the version, :doc:<a href="#id3"><span class="problematic" id="id4">`</span></a>v1 &lt;v1&gt;` will be used.</p>
+<p>formats</p>
+<hr class="docutils" />
+<p>Formats of the documentation to be built.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``list``</p>
+</dd>
+<dt class="field-even">Options</dt>
+<dd class="field-even"><p>``htmlzip``, ``pdf``, ``epub``</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>``[]``</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p># Default</p>
+<p>formats: []</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p># Build PDF &amp; ePub</p>
+<p>formats:</p>
+<ul class="simple">
+<li><p>epub</p></li>
+<li><p>pdf</p></li>
+</ul>
+<p>You can use the ``all`` keyword to indicate all formats.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p># Build all formats</p>
+<p>formats: all</p>
+<p>``pdf``, ``epub``, and ``htmlzip`` output is not supported when
+using MkDocs.</p>
+<p>python</p>
+<hr class="docutils" />
+<p>Configuration of the Python environment to be used.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>python:</p>
+<p>version: 3.7</p>
+<p>install:</p>
+<ul class="simple">
+<li><p>requirements: docs/requirements.txt</p></li>
+<li><p>method: pip</p></li>
+</ul>
+<p>path: .</p>
+<p>extra_requirements:</p>
+<ul class="simple">
+<li><p>docs</p></li>
+<li><p>method: setuptools</p></li>
+</ul>
+<p>path: another/package</p>
+<p>system_packages: true</p>
+<p>python.version</p>
+<p>``````````````</p>
+<p>The Python version (this depends on <span class="xref std std-ref">config-file/v2:build.image</span>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``number``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``3``</p>
+</dd>
+</dl>
+<p>If you are using a :ref:<a href="#id5"><span class="problematic" id="id6">`</span></a>Conda &lt;config-file/v2:conda&gt;` environment to
+manage</p>
+<p>the build, this setting will not have any effect, as the Python version
+is managed by Conda.</p>
+<p>python.install</p>
+<p>``````````````</p>
+<p>List of installation methods of packages and requirements.</p>
+<p>You can have several of the following methods.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``list``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``[]``</p>
+</dd>
+</dl>
+<p>Requirements file</p>
+<hr class="docutils" />
+<p>Install packages from a requirements file.</p>
+<p>The path to the requirements file, relative to the root of the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>``requirements``</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>``path``</p>
+</dd>
+<dt class="field-odd">Required</dt>
+<dd class="field-odd"><p>``true``</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>python:</p>
+<p>version: 3.7</p>
+<p>install:</p>
+<ul class="simple">
+<li><p>requirements: docs/requirements.txt</p></li>
+<li><p>requirements: requirements.txt</p></li>
+</ul>
+<p>If you are using a :ref:<a href="#id7"><span class="problematic" id="id8">`</span></a>Conda &lt;config-file/v2:conda&gt;` environment to</p>
+<p>manage the build, this setting will not have any effect. Instead</p>
+<p>add the extra requirements to the ``environment`` file of Conda.</p>
+<p>Packages</p>
+<hr class="docutils" />
+<p>Install the project using ``python setup.py install`` or ``pip
+install``.</p>
+<p>The path to the package, relative to the root of the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>``path``</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>``path``</p>
+</dd>
+<dt class="field-odd">Required</dt>
+<dd class="field-odd"><p>``true``</p>
+</dd>
+</dl>
+<p>The installation method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>``method``</p>
+</dd>
+<dt class="field-even">Options</dt>
+<dd class="field-even"><p>``pip``, ``setuptools``</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>``pip``</p>
+</dd>
+</dl>
+<p>`Extra requirements`_ section to install in addition to the `package
+dependencies`_.</p>
+<p><a class="reference external" href="https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras-optional-features-with-their-own-dependencies">https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras-optional-features-with-their-own-dependencies</a></p>
+<p><a class="reference external" href="https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-dependencies">https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-dependencies</a></p>
+<p>You need to install your project with ``pip`` to use
+``extra_requirements``.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Key</dt>
+<dd class="field-odd"><p>``extra_requirements``</p>
+</dd>
+<dt class="field-even">Type</dt>
+<dd class="field-even"><p>``list``</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>``[]``</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>python:</p>
+<p>version: 3.7</p>
+<p>install:</p>
+<ul class="simple">
+<li><p>method: pip</p></li>
+</ul>
+<p>path: .</p>
+<p>extra_requirements:</p>
+<ul class="simple">
+<li><p>docs</p></li>
+<li><p>method: setuptools</p></li>
+</ul>
+<p>path: package</p>
+<p>With the previous settings, Read the Docs will execute the next
+commands:</p>
+<p>pip install .[docs]</p>
+<p>python package/setup.py install</p>
+<p>python.system_packages</p>
+<p>``````````````````````</p>
+<p>Give the virtual environment access to the global site-packages
+directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``bool``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``false``</p>
+</dd>
+</dl>
+<p>Depending on the <span class="xref std std-ref">config-file/v2:build.image</span>,</p>
+<p>Read the Docs includes some libraries like scipy, numpy, etc.</p>
+<p>That you can access to them by enabling this option.</p>
+<p>See :doc:<a href="#id9"><span class="problematic" id="id10">`</span></a>/builds` for more details.</p>
+<p>If you are using a :ref:<a href="#id11"><span class="problematic" id="id12">`</span></a>Conda &lt;config-file/v2:conda&gt;` environment</p>
+<p>to manage the build, this setting will not have any effect, since</p>
+<p>the virtual environment creation is managed by Conda.</p>
+<p>conda</p>
+<hr class="docutils" />
+<p>Configuration for Conda support.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>conda:</p>
+<p>environment: environment.yml</p>
+<p>conda.environment</p>
+<p>`````````````````</p>
+<p>The path to the Conda environment file, relative to the root of the
+project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``path``</p>
+</dd>
+<dt class="field-even">Required</dt>
+<dd class="field-even"><p>``true``</p>
+</dd>
+</dl>
+<p>build</p>
+<hr class="docutils" />
+<p>Configuration for the documentation build process.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>build:</p>
+<p>image: latest</p>
+<p>python:</p>
+<p>version: 3.7</p>
+<p>build.image</p>
+<p>```````````</p>
+<p>The Docker image used for building the docs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``string``</p>
+</dd>
+<dt class="field-even">Options</dt>
+<dd class="field-even"><p>``stable``, ``latest``</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>``latest``</p>
+</dd>
+</dl>
+<p>Each image support different Python versions and has different packages
+installed,</p>
+<p>as defined here:</p>
+<p>* `stable
+&lt;<a class="reference external" href="https://github.com/readthedocs/readthedocs-docker-images/tree/releases/4.x">https://github.com/readthedocs/readthedocs-docker-images/tree/releases/4.x</a>&gt;`_:
+:buildpyversions:<a href="#id13"><span class="problematic" id="id14">`</span></a>stable`</p>
+<p>* `latest
+&lt;<a class="reference external" href="https://github.com/readthedocs/readthedocs-docker-images/tree/releases/5.x">https://github.com/readthedocs/readthedocs-docker-images/tree/releases/5.x</a>&gt;`_:
+:buildpyversions:<a href="#id15"><span class="problematic" id="id16">`</span></a>latest`</p>
+<p>sphinx</p>
+<hr class="docutils" />
+<p>Configuration for Sphinx documentation</p>
+<p>(this is the default documentation type).</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>sphinx:</p>
+<p>builder: html</p>
+<p>configuration: conf.py</p>
+<p>fail_on_warning: true</p>
+<p>sphinx.builder</p>
+<p>``````````````</p>
+<p>The builder type for the Sphinx documentation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``string``</p>
+</dd>
+<dt class="field-even">Options</dt>
+<dd class="field-even"><p>``html``, ``dirhtml``, ``singlehtml``</p>
+</dd>
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>``html``</p>
+</dd>
+</dl>
+<p>The ``htmldir`` builder option was renamed to ``dirhtml`` to use the
+same name as sphinx.</p>
+<p>Configurations using the old name will continue working.</p>
+<p>sphinx.configuration</p>
+<p>````````````````````</p>
+<p>The path to the ``conf.py`` file, relative to the root of the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``path``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``null``</p>
+</dd>
+</dl>
+<p>If the value is ``null``,</p>
+<p>Read the Docs will try to find a ``conf.py`` file in your project.</p>
+<p>sphinx.fail_on_warning</p>
+<p>``````````````````````</p>
+<p>`Turn warnings into errors
+&lt;<a class="reference external" href="http://www.sphinx-doc.org/en/master/man/sphinx-build.html#id6">http://www.sphinx-doc.org/en/master/man/sphinx-build.html#id6</a>&gt;`__.</p>
+<p>This means that the build stops at the first warning and exits with exit
+status 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``bool``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``false``</p>
+</dd>
+</dl>
+<p>mkdocs</p>
+<hr class="docutils" />
+<p>Configuration for Mkdocs documentation.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>mkdocs:</p>
+<p>configuration: mkdocs.yml</p>
+<p>fail_on_warning: false</p>
+<p>mkdocs.configuration</p>
+<p>````````````````````</p>
+<p>The path to the ``mkdocs.yml`` file, relative to the root of the
+project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``path``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``null``</p>
+</dd>
+</dl>
+<p>If the value is ``null``,</p>
+<p>Read the Docs will try to find a ``mkdocs.yml`` file in your project.</p>
+<p>mkdocs.fail_on_warning</p>
+<p>``````````````````````</p>
+<p>`Turn warnings into errors
+&lt;<a class="reference external" href="https://www.mkdocs.org/user-guide/configuration/#strict">https://www.mkdocs.org/user-guide/configuration/#strict</a>&gt;`__.</p>
+<p>This means that the build stops at the first warning and exits with exit
+status 1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``bool``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``false``</p>
+</dd>
+</dl>
+<p>submodules</p>
+<hr class="docutils" />
+<p>VCS submodules configuration.</p>
+<p>Only Git is supported at the moment.</p>
+<p>You can’t use ``include`` and ``exclude`` settings for submodules at
+the same time.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>submodules:</p>
+<p>include:</p>
+<ul class="simple">
+<li><p>one</p></li>
+<li><p>two</p></li>
+</ul>
+<p>recursive: true</p>
+<p>submodules.include</p>
+<p>``````````````````</p>
+<p>List of submodules to be included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``list``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``[]``</p>
+</dd>
+</dl>
+<p>You can use the ``all`` keyword to include all submodules.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>submodules:</p>
+<p>include: all</p>
+<p>submodules.exclude</p>
+<p>``````````````````</p>
+<p>List of submodules to be excluded.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``list``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``[]``</p>
+</dd>
+</dl>
+<p>You can use the ``all`` keyword to exclude all submodules.</p>
+<p>This is the same as ``include: []``.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>submodules:</p>
+<p>exclude: all</p>
+<p>submodules.recursive</p>
+<p>````````````````````</p>
+<p>Do a recursive clone of the submodules.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>``bool``</p>
+</dd>
+<dt class="field-even">Default</dt>
+<dd class="field-even"><p>``false``</p>
+</dd>
+</dl>
+<p>This is ignored if there aren’t submodules to clone.</p>
+<p>Schema</p>
+<hr class="docutils" />
+<p>You can see the complete schema</p>
+<p>`here
+&lt;<a class="reference external" href="https://github.com/readthedocs/readthedocs.org/blob/master/readthedocs/rtd_tests/fixtures/spec/v2/schema.yml">https://github.com/readthedocs/readthedocs.org/blob/master/readthedocs/rtd_tests/fixtures/spec/v2/schema.yml</a>&gt;`_.</p>
+<p>Migrating from v1</p>
+<hr class="docutils" />
+<p>Changes</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>The version setting is required. See <span class="xref std std-ref">config-file/v2:version</span>.</p></li>
+<li><p>The default value of the :ref:<a href="#id17"><span class="problematic" id="id18">`</span></a>config-file/v2:formats` setting has</p></li>
+</ul>
+<p>changed to ``[]``</p>
+<p>and it doesn’t include the values from the web interface.</p>
+<ul class="simple">
+<li><p>The top setting ``requirements_file`` was moved to</p></li>
+</ul>
+<p>``python.install``</p>
+<p>and we don’t try to find a requirements file if the option isn’t
+present.</p>
+<p>See <span class="xref std std-ref">config-file/v2:Requirements file</span>.</p>
+<ul class="simple">
+<li><p>The setting ``conda.file`` was renamed to ``conda.environment``.</p></li>
+</ul>
+<p>See <span class="xref std std-ref">config-file/v2:conda.environment</span>.</p>
+<ul class="simple">
+<li><p>The ``build.image`` setting now only has two options: ``latest``</p></li>
+</ul>
+<p>(default) and ``stable``.</p>
+<p>See <span class="xref std std-ref">config-file/v2:build.image</span>.</p>
+<ul class="simple">
+<li><p>The settings ``python.setup_py_install`` and</p></li>
+</ul>
+<p>``python.pip_install`` were replaced by ``python.install``.</p>
+<p>And now it accepts a path to the package.</p>
+<p>See <span class="xref std std-ref">config-file/v2:Packages</span>.</p>
+<ul class="simple">
+<li><p>The setting ``python.use_system_site_packages`` was renamed to</p></li>
+</ul>
+<p>``python.system_packages``.</p>
+<p>See <span class="xref std std-ref">config-file/v2:python.system_packages</span>.</p>
+<ul class="simple">
+<li><p>The build will fail if there are invalid keys (strict mode).</p></li>
+</ul>
+<p>Some values from the web interface are no longer respected,</p>
+<p>please see :ref:<a href="#id19"><span class="problematic" id="id20">`</span></a>config-file/v2:Migrating from the web interface` if
+you have settings there.</p>
+<p>New settings</p>
+<hr class="docutils" />
+<ul class="simple">
+<li><p>:ref:<a href="#id21"><span class="problematic" id="id22">`</span></a>config-file/v2:sphinx`</p></li>
+<li><p>:ref:<a href="#id23"><span class="problematic" id="id24">`</span></a>config-file/v2:mkdocs`</p></li>
+<li><p>:ref:<a href="#id25"><span class="problematic" id="id26">`</span></a>config-file/v2:submodules`</p></li>
+<li><p>:ref:<a href="#id27"><span class="problematic" id="id28">`</span></a>config-file/v2:python.install`</p></li>
+</ul>
+<p>Migrating from the web interface</p>
+<hr class="docutils" />
+<p>This should be pretty straightforward,</p>
+<p>just go to the <span class="guilabel">Admin` &gt; :guilabel:`Advanced settings</span>,</p>
+<p>and find their respective setting in <span class="xref std std-ref">here</span>.</p>
+<p>Not all settings in the web interface are per version, but are per
+project.</p>
+<p>These settings aren’t supported via the configuration file.</p>
+<p>* ``Name``</p>
+<p>* ``Repository URL``</p>
+<p>* ``Repository type``</p>
+<p>* ``Language``</p>
+<p>* ``Programming language``</p>
+<p>* ``Project homepage``</p>
+<p>* ``Tags``</p>
+<p>* ``Single version``</p>
+<p>* ``Default branch``</p>
+<p>* ``Default version``</p>
+<p>* ``Show versions warning``</p>
+<p>* ``Privacy level``</p>
+<p>* ``Analytics code``</p>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Sample Project</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="webhooks.html">Webhooks</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="Build_Process.html" title="previous chapter">&lt;no title&gt;</a></li>
+      <li>Next: <a href="features.html" title="next chapter">Features</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sherin Daher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/Configuration_File.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

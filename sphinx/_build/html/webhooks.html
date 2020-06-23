@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Webhooks &#8212; Sample Project 0.9.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Features" href="features.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="webhooks">
+<h1>Webhooks<a class="headerlink" href="#webhooks" title="Permalink to this headline">¶</a></h1>
+<p>Incoming Webhooks and Automation</p>
+<hr class="docutils" />
+<p>The primary method that Read the Docs uses to detect changes to your</p>
+<p>documentation and versions is through the use of *webhooks*. Webhooks
+are configured with</p>
+<p>your repository provider, such as GitHub, Bitbucket or GitLab,</p>
+<p>and with each change to your repository, Read the Docs is notified. When
+we</p>
+<p>receive a webhook notification, we determine if the change is related to
+an</p>
+<p>active version for your project, and if it is, a build is triggered for
+that</p>
+<p>version.</p>
+<p>Webhook Integrations</p>
+<hr class="docutils" />
+<p>You’ll find a list of configured webhook integrations on your project’s
+:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Admin`</p>
+<p>dashboard, under <span class="guilabel">Integrations</span>. You can select any of these
+integrations to</p>
+<p>see the *integration detail page*. This page has additional
+configuration</p>
+<p>details and a list of HTTP exchanges that have taken place for the
+integration.</p>
+<p>You need this information for the URL, webhook, or Payload URL needed by
+the</p>
+<p>repository provider such as GitHub, GitLab, or Bitbucket.</p>
+<p>Webhook Creation</p>
+<hr class="docutils" />
+<p>If you have :doc:<a href="#id3"><span class="problematic" id="id4">`</span></a>connected your Read the Docs account
+&lt;/connected-accounts&gt;` to GitHub, Bitbucket, or GitLab,</p>
+<p>**a webhook will be set up automatically for your repository**.
+However, if your</p>
+<p>project was not imported through a connected account, you may need to</p>
+<p>manually configure a webhook for your project.</p>
+<p>To manually set up a webhook, go to :guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Admin` &gt;
+:guilabel:<a href="#id7"><span class="problematic" id="id8">`</span></a>Integrations` &gt; :guilabel:<a href="#id9"><span class="problematic" id="id10">`</span></a>Add integration`</p>
+<p>dashboard page and select the integration type you’d like to add.</p>
+<p>After you have added the integration, you’ll see a link to information
+about the integration.</p>
+<p>As an example, the URL pattern looks like this:
+*https://readthedocs.org/api/v2/webhook/&lt;project-name&gt;/&lt;id&gt;/<a href="#id11"><span class="problematic" id="id12">*</span></a>.</p>
+<p>Use this URL when setting up a new webhook with your provider – these
+steps vary depending on the provider.</p>
+<p>If your account is connected to the provider,</p>
+<p>we’ll try to setup the webhook automatically.</p>
+<p>If something fails, you can still setup the webhook manually.</p>
+<p>GitHub</p>
+<hr class="docutils" />
+<p>* Go to the :guilabel:<a href="#id13"><span class="problematic" id="id14">`</span></a>Settings` page for your project</p>
+<p>* Click :guilabel:<a href="#id15"><span class="problematic" id="id16">`</span></a>Webhooks` &gt; :guilabel:<a href="#id17"><span class="problematic" id="id18">`</span></a>Add webhook`</p>
+<p>* For **Payload URL**, use the URL of the integration on Read the
+Docs,</p>
+<p>found on the project’s :guilabel:<a href="#id19"><span class="problematic" id="id20">`</span></a>Admin` &gt; :guilabel:<a href="#id21"><span class="problematic" id="id22">`</span></a>Integrations`
+page.</p>
+<p>You may need to prepend *https://* to the URL.</p>
+<p>* For **Content type**, both *application/json* and</p>
+<p>*application/x-www-form-urlencoded* work</p>
+<p>* Leave the **Secrets** field blank</p>
+<p>* Select **Let me select individual events**,</p>
+<p>and mark **Branch or tag creation**, **Branch or tag deletion** and
+**Pushes** events</p>
+<p>* Ensure **Active** is enabled; it is by default</p>
+<p>* Finish by clicking **Add webhook**. You may be prompted to enter
+your GitHub password to confirm your action.</p>
+<p>You can verify if the webhook is working at the bottom of the GitHub
+page under **Recent Deliveries**.</p>
+<p>If you see a Response 200, then the webhook is correctly configured.</p>
+<p>For a 403 error, it’s likely that the Payload URL is incorrect.</p>
+<p>GitHub will emit an initial HTTP request (<cite>X-GitHub-Event: ping</cite>) upon
+creating the webhook and you may notice that the Read the Docs responds
+with `{“detail”:”Unhandled webhook event”}` – this is normal and
+expected.</p>
+<p>Push changes to your repository and webhooks will work from this point.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The webhook token, intended for the GitHub **Secret** field,</p>
+</div>
+<p>is not yet implemented.</p>
+<p>Bitbucket</p>
+<hr class="docutils" />
+<p>* Go to the :guilabel:<a href="#id23"><span class="problematic" id="id24">`</span></a>Settings` &gt; :guilabel:<a href="#id25"><span class="problematic" id="id26">`</span></a>Webhooks` &gt;
+:guilabel:<a href="#id27"><span class="problematic" id="id28">`</span></a>Add webhook` page for your project</p>
+<p>* For **URL**, use the URL of the integration on Read the Docs,</p>
+<p>found on the :guilabel:<a href="#id29"><span class="problematic" id="id30">`</span></a>Admin` &gt; :guilabel:<a href="#id31"><span class="problematic" id="id32">`</span></a>Integrations` page</p>
+<p>* Under **Triggers**, **Repository push** should be selected</p>
+<p>* Finish by clicking **Save**</p>
+<p>GitLab</p>
+<hr class="docutils" />
+<p>* Go to the :guilabel:<a href="#id33"><span class="problematic" id="id34">`</span></a>Settings` &gt; :guilabel:<a href="#id35"><span class="problematic" id="id36">`</span></a>Integrations` page for
+your project</p>
+<p>* For **URL**, use the URL of the integration on Read the Docs,</p>
+<p>found on the :guilabel:<a href="#id37"><span class="problematic" id="id38">`</span></a>Admin` &gt; :guilabel:<a href="#id39"><span class="problematic" id="id40">`</span></a>Integrations` page</p>
+<p>* Leave the default **Push events** selected and mark **Tag push
+events** also</p>
+<p>* Finish by clicking **Add Webhook**</p>
+<p>Using the generic API integration</p>
+<hr class="docutils" />
+<p>For repositories that are not hosted with a supported provider, we also
+offer a</p>
+<p>generic API endpoint for triggering project builds. Similar to webhook
+integrations,</p>
+<p>this integration has a specific URL, which can be found on the project’s
+**Integrations** dashboard page</p>
+<p>(<span class="guilabel">Admin` &gt; :guilabel:`Integrations</span>).</p>
+<p>Token authentication is required to use the generic endpoint, you will
+find this</p>
+<p>token on the integration details page. The token should be passed in as
+a</p>
+<p>request parameter, either as form data or as part of JSON data input.</p>
+<p>Parameters</p>
+<hr class="docutils" />
+<p>This endpoint accepts the following arguments during an HTTP POST:</p>
+<p>branches</p>
+<p>The names of the branches to trigger builds for. This can either be an
+array</p>
+<p>of branch name strings, or just a single branch name string.</p>
+<p>Default: **latest**</p>
+<p>token</p>
+<p>The integration token found on the project’s **Integrations**
+dashboard page</p>
+<p>(<span class="guilabel">Admin` &gt; :guilabel:`Integrations</span>).</p>
+<p>For example, the cURL command to build the ``dev`` branch, using the
+token</p>
+<p>``1234``, would be:</p>
+<p>curl -X POST -d “branches=dev” -d “token=1234”
+<a class="reference external" href="https://readthedocs.org/api/v2/webhook/example-project/1/">https://readthedocs.org/api/v2/webhook/example-project/1/</a></p>
+<p>A command like the one above could be called from a cron job or from a
+hook</p>
+<p>inside <a href="#id49"><span class="problematic" id="id50">Git_</span></a>, <a href="#id51"><span class="problematic" id="id52">Subversion_</span></a>, <a href="#id53"><span class="problematic" id="id54">Mercurial_</span></a>, or <a href="#id55"><span class="problematic" id="id56">Bazaar_</span></a>.</p>
+<p><a class="reference external" href="https://www.mikewest.org/2006/06/subversion-post-commit-hooks-101">https://www.mikewest.org/2006/06/subversion-post-commit-hooks-101</a></p>
+<p><a class="reference external" href="http://hgbook.red-bean.com/read/handling-repository-events-with-hooks.html">http://hgbook.red-bean.com/read/handling-repository-events-with-hooks.html</a></p>
+<p>Authentication</p>
+<hr class="docutils" />
+<p>This endpoint requires authentication. If authenticating with an
+integration</p>
+<p>token, a check will determine if the token is valid and matches the
+given</p>
+<p>project. If instead an authenticated user is used to make this request,
+a check</p>
+<p>will be performed to ensure the authenticated user is an owner of the
+project.</p>
+<p>Debugging webhooks</p>
+<hr class="docutils" />
+<p>If you are experiencing problems with an existing webhook, you may be
+able to</p>
+<p>use the integration detail page to help debug the issue. Each project</p>
+<p>integration, such as a webhook or the generic API endpoint, stores the
+HTTP</p>
+<p>exchange that takes place between Read the Docs and the external source.
+You’ll</p>
+<p>find a list of these exchanges in any of the integration detail pages.</p>
+<p>Resyncing webhooks</p>
+<hr class="docutils" />
+<p>It might be necessary to re-establish a webhook if you are noticing
+problems.</p>
+<p>To resync a webhook from Read the Docs, visit the integration detail
+page and</p>
+<p>follow the directions for re-syncing your repository webhook.</p>
+<p>Payload validation</p>
+<hr class="docutils" />
+<p>If your project was imported through a connected account,</p>
+<p>we create a secret for every integration that offers a way to verify
+that a webhook request is legitimate.</p>
+<p>Currently, `GitHub
+&lt;<a class="reference external" href="https://developer.github.com/webhooks/securing/">https://developer.github.com/webhooks/securing/</a>&gt;`__ and `GitLab
+&lt;<a class="reference external" href="https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#secret-token">https://docs.gitlab.com/ee/user/project/integrations/webhooks.html#secret-token</a>&gt;`__</p>
+<p>offer a way to check this.</p>
+<p>Troubleshooting</p>
+<hr class="docutils" />
+<p>Webhook activation failed. Make sure you have the necessary permissions</p>
+<hr class="docutils" />
+<p>If you find this error,</p>
+<p>make sure your user has permissions over the repository.</p>
+<p>In case of GitHub,</p>
+<p>check that you have granted access to the Read the Docs `OAuth App`_
+to your organization.</p>
+<p>My project isn’t automatically building</p>
+<hr class="docutils" />
+<p>If your project isn’t automatically building, you can check your
+integration on</p>
+<p>Read the Docs to see the payload sent to our servers. If there is no
+recent</p>
+<p>activity on your Read the Docs project webhook integration, then it’s
+likely</p>
+<p>that your VCS provider is not configured correctly. If there is payload</p>
+<p>information on your Read the Docs project, you might need to verify that
+your</p>
+<p>versions are configured to build correctly.</p>
+<p>Either way, it may help to either resync your webhook integration (see</p>
+<p>`Resyncing webhooks`_ for information on this process), or set up an
+entirely</p>
+<p>new webhook integration.</p>
+<p>I was warned I shouldn’t use GitHub Services</p>
+<hr class="docutils" />
+<p>Last year, GitHub announced that effective Jan 31st, 2019, GitHub
+Services will stop</p>
+<p>working <a class="footnote-reference brackets" href="#id46" id="id41">1</a>. This means GitHub will stop sending notifications to Read
+the Docs</p>
+<p>for projects configured with the ``ReadTheDocs`` GitHub Service. If
+your project</p>
+<p>has been configured on Read the Docs for a long time, you are most
+likely still</p>
+<p>using this service to automatically build your project on Read the Docs.</p>
+<p>In order for your project to continue automatically building, you will
+need to</p>
+<p>configure your GitHub repository with a new webhook. You can use either
+a</p>
+<p>connected GitHub account and a :ref:<a href="#id42"><span class="problematic" id="id43">`</span></a>GitHub webhook integration
+&lt;webhook-integration-github&gt;`</p>
+<p>on your Read the Docs project, or you can use a</p>
+<p>:ref:<a href="#id44"><span class="problematic" id="id45">`</span></a>generic webhook integration &lt;webhook-integration-generic&gt;`
+without a connected</p>
+<p>account.</p>
+<dl class="footnote brackets">
+<dt class="label" id="id46"><span class="brackets"><a class="fn-backref" href="#id41">1</a></span></dt>
+<dd></dd>
+</dl>
+<p><a class="reference external" href="https://developer.github.com/changes/2018-04-25-github-services-deprecation/">https://developer.github.com/changes/2018-04-25-github-services-deprecation/</a></p>
+<p>I was warned that my project won’t automatically build after April 1st</p>
+<hr class="docutils" />
+<p>In addition to <span class="xref std std-ref">no longer supporting GitHub Services</span>,</p>
+<p>we have decided to no longer support several other legacy incoming
+webhook</p>
+<p>endpoints that were used before we introduced project webhook
+integrations. When</p>
+<p>we introduced our webhook integrations, we added several features and
+improved</p>
+<p>security for incoming webhooks and these features were not added to our
+leagcy</p>
+<p>incoming webhooks. New projects have not been able to use our legacy
+incoming</p>
+<p>webhooks since, however if you have a project that has been established
+for a</p>
+<p>while, you may still be using these endpoints.</p>
+<p>After March 1st, 2019, we will stop accepting incoming webhook
+notifications for</p>
+<p>these legacy incoming webhooks. Your project will need to be
+reconfigured and</p>
+<p>have a webhook integration configured, pointing to a new webhook with
+your VCS</p>
+<p>provider.</p>
+<p>In particular, the incoming webhook URLs that will be removed are:</p>
+<p>* ``https://readthedocs.org/build``</p>
+<p>* ``https://readthedocs.org/bitbucket``</p>
+<p>* ``https://readthedocs.org/github`` (as noted <span class="xref std std-ref">above</span>)</p>
+<p>* ``https://readthedocs.org/gitlab``</p>
+<p>In order to establish a new project webhook integration, :ref:<a href="#id47"><span class="problematic" id="id48">`</span></a>follow</p>
+<p>the directions for your VCS provider &lt;webhook-creation&gt;`</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Sample Project</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="features.html">Features</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Webhooks</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="features.html" title="previous chapter">Features</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Sherin Daher.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/webhooks.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
