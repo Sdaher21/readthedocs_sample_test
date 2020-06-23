@@ -1,6 +1,6 @@
+*********************
 Configuration File V2
-
-=====================
+*********************
 
 Read the Docs supports configuring your documentation builds with a YAML
 file.
@@ -56,8 +56,7 @@ install:
 - requirements: docs/requirements.txt
 
 Supported settings
-
-------------------
+==================
 
 Read the Docs validates every configuration file.
 
