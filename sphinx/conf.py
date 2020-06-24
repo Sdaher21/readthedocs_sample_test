@@ -20,6 +20,8 @@
 project = 'Sample Project'
 copyright = '2020, Sherin Daher'
 author = 'Sherin Daher'
+master_doc = 'index'
+
 
 # The full version, including alpha/beta/rc tags
 release = '0.9.0'
