@@ -1,0 +1,426 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Open Network Automation Platform Overview &mdash; Sample Project 0.9.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sample Project
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Home</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sample Project</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Open Network Automation Platform Overview</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/Open_Network_Automation_Platform_Overview.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="open-network-automation-platform-overview">
+<h1>Open Network Automation Platform Overview<a class="headerlink" href="#open-network-automation-platform-overview" title="Permalink to this headline">¶</a></h1>
+<p>The Open Network Automation Platform (ONAP) project addresses the
+rising need for a <strong>common automation platform for telecommunication, cable,
+and cloud service providers**â€”and their solution providersâ€” that enables the
+**automation of different lifecycle processes</strong>, to deliver differentiated
+network services on demand, profitably and competitively, while leveraging
+existing investments.</p>
+<p>Prior to ONAP, telecommunication network operators had to keep up with the
+scale and cost of manual changes required to implement new service offerings,
+from installing new data center equipment to, in some cases, upgrading
+customer equipment on-premises. Many operators are seeking to exploit
+Software Defined Network (SDN) and Network Function Virtualization (NFV)
+to improve service velocity, simplify equipment interoperability and
+integration, and reduce overall CapEx and OpEx costs. In addition, the
+current, highly fragmented management landscape makes it difficult to
+monitor and guarantee service-level agreements (SLAs).</p>
+<p>ONAP is addressing these challenges by developing global and massive
+scale (multi-site and multi-Virtual Infrastructure Manager (VIM))
+automation capabilities for both physical and virtual network elements.
+It facilitates service agility by supporting data models for rapid
+service and resource deployment, by providing a common set of Northbound
+REST APIs that are open and interoperable, and by supporting model
+driven interfaces to the networks. ONAPâ€™s modular and layered nature
+improves interoperability and simplifies integration, allowing it to
+support multiple VNF environments by integrating with multiple VIMs,
+virtualized network function managers (VNFMs), SDN Controllers, and
+even legacy equipment. ONAPâ€™s consolidated VNF requirements enable
+commercial development of ONAP-compliant VNFs. This approach allows
+network and cloud operators to optimize their physical and virtual
+infrastructure for cost and performance; at the same time, ONAPâ€™s
+use of standard models reduces integration and deployment costs of
+heterogeneous equipment, while minimizing management fragmentation.</p>
+<div class="section" id="scope-of-onap">
+<h2>Scope of ONAP<a class="headerlink" href="#scope-of-onap" title="Permalink to this headline">¶</a></h2>
+<p>ONAP enables end user organizations and their network or cloud providers
+to collaboratively instantiate network elements and services in a dynamic,
+closed control loop process, with real-time response to actionable events.</p>
+<p>ONAPâ€™s major activities, that is designing, deploying and operating
+services, are provided based on ONAPâ€™s two major frameworks, namely on
+Design-time framework and Run-time framework:</p>
+<a class="reference internal image-reference" href="media/ONAP_main_functions.png"><img alt="media/ONAP_main_functions.png" src="media/ONAP_main_functions.png" /></a>
+<p>In order to design, deploy and operate services and assure these dynamic
+services, ONAP activities are built up as follows:</p>
+<ul class="simple">
+<li><p><strong>Service design</strong> â€“ Service design is built on a robust design framework
+that allows specification of the service in all aspects â€“ modeling the
+resources and relationships that make up the service, specifying the policy
+rules that guide the service behavior, specifying the applications, analytic
+and closed control loop events needed for the elastic management of the
+service.</p></li>
+<li><p><strong>Service deployment</strong> â€“ Service deployment is built on an orchestration
+and control framework that is policy-driven (Service Orchestrator and
+Controllers) to provide automated instantiation of the service when
+needed and managing service demands in an elastic manner.</p></li>
+<li><p><strong>Service operations</strong> â€“ Service operations are built on an analytic
+framework that closely monitors the service behavior during the service
+lifecycle based on the specified design, analytics and policies to enable
+response as required from the control framework, to deal with situations
+ranging from those that require healing to those that require scaling
+of the resources to elastically adjust to demand variations.</p></li>
+</ul>
+<p>ONAP enables product- or service-independent capabilities for design,
+deployment and operation, in accordance with the following foundational
+principles:</p>
+<ol class="arabic simple">
+<li><p>Ability to dynamically introduce full service lifecycle orchestration
+(design, provisioning and operation) and service API for new services
+and technologies without the need for new platform software releases
+or without affecting operations for the existing services</p></li>
+<li><p>Carrier-grade scalability including horizontal scaling (linear scale-out)
+and distribution to support large number of services and large networks</p></li>
+<li><p>Metadata-driven and policy-driven architecture to ensure flexible and
+automated ways in which capabilities are used and delivered</p></li>
+<li><p>The architecture shall enable sourcing best-in-class components</p></li>
+<li><p>Common capabilities are â€˜developedâ€™ once and â€˜usedâ€™ many times</p></li>
+<li><p>Core capabilities shall support many diverse services and infrastructures</p></li>
+<li><p>The architecture shall support elastic scaling as needs grow or shrink</p></li>
+</ol>
+</div>
+<div class="section" id="functional-overview-of-onap">
+<h2>Functional overview of ONAP<a class="headerlink" href="#functional-overview-of-onap" title="Permalink to this headline">¶</a></h2>
+<p>The following guidelines show the main ONAP activities in a chronological
+order, presenting ONAP’s functional structure:</p>
+<p>1. <strong>Service design</strong> - ONAP supports Service Design operations, using the
+TOSCA approach.
+These service design activities are built up of the following subtasks:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Planning VNF onboarding â€“ checking which VNFs will be necessary for the
+required environment and features</p></li>
+<li><p>Creating resources, composing services</p></li>
+<li><p>Distributing services - Distributing services constitutes of 2 subtasks:</p>
+<ul class="simple">
+<li><p>TOSCA C-SAR package is stored in the Catalog</p></li>
+<li><p>new service notification is published</p></li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Service orchestration and deployment</strong></p></li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Defining which VNFs are necessary for the service</p></li>
+<li><p>Defining orchestration steps</p></li>
+<li><p>Selecting valid cloud region</p></li>
+<li><p>Service orchestration calling cloud APIs to deploy VNFs</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>The onboarding and instantiation of VNFs in ONAP is represented via
+the example of onboarding and instantiating a virtual network function
+(VNF), the virtual Firewall (vFirewall). Following the guidelines and
+steps of this example, any other VNF can be similarly onboarded
+and instantiated to ONAP. See <span class="xref std std-ref">virtual Firewall Onboarding and
+Instantiating</span> examples.</p></li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="5">
+<li><p>Controllers applying configuration on VNFs</p></li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>Service operations</strong></p></li>
+</ol>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><p>Closed Loop design and deployment</p></li>
+<li><p>Collecting and evaluating event data</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="benefits-of-onap">
+<h2>Benefits of ONAP<a class="headerlink" href="#benefits-of-onap" title="Permalink to this headline">¶</a></h2>
+<p>Open Network Automation Platform provides the following benefits:</p>
+<ul class="simple">
+<li><p>common automation platform, which enables common management of services and
+connectivity, while the applications run separately</p></li>
+<li><p>a unified operating framework for vendor-agnostic, policy-driven service
+design, implementation, analytics and lifecycle management for
+large-scale workloads and services</p></li>
+<li><p>orchestration for both virtual and physical network functions</p></li>
+<li><p>ONAP offers Service or VNF Configuration capability, in contrast to other
+open-source orchestration platforms</p></li>
+<li><p>the model-driven approach enables ONAP to support services, that are using
+different VNFs, as a common service block</p></li>
+<li><p>service modelling enables operators to use the same deployment and management
+mechanisms, beside also using the same platform</p></li>
+</ul>
+</div>
+<div class="section" id="onap-release-information">
+<h2>ONAP Release information<a class="headerlink" href="#onap-release-information" title="Permalink to this headline">¶</a></h2>
+<p>ONAP is enhanced with numerous features from release to release. Each release
+is named after a city.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 13%" />
+<col style="width: 18%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Release Name</p></th>
+<th class="head"><p>Release version</p></th>
+<th class="head"><p>Release Date</p></th>
+<th class="head"><p>Features delivered</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Frankfurt</p></td>
+<td><p>6.0.0</p></td>
+<td><p>11 June 2020</p></td>
+<td><p><a class="reference internal" href="Release_Notes.html#release-notes"><span class="std std-ref">Frankfurt Release Notes</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>El Alto</p></td>
+<td><p>5.0.1</p></td>
+<td><p>24 October 2019</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>Dublin</p></td>
+<td><p>4.0.0</p></td>
+<td><p>9 July 2019</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Casablanca</p></td>
+<td><ul class="simple">
+<li><p>3.0.2</p></li>
+<li><p>3.0.1</p></li>
+<li><p>3.0.0</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p>31 January 2019</p></li>
+<li><p>30 November 2018</p></li>
+<li><p>15 April 2019</p></li>
+</ul>
+</td>
+<td></td>
+</tr>
+<tr class="row-even"><td rowspan="2"><p>Beijing</p></td>
+<td rowspan="2"><p>2.0.0</p></td>
+<td rowspan="2"><p>7 June 2018</p></td>
+<td rowspan="2"></td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"><td rowspan="2"><p>Amsterdam</p></td>
+<td rowspan="2"><p>1.0.0</p></td>
+<td rowspan="2"><p>16 November 2017</p></td>
+<td rowspan="2"></td>
+</tr>
+<tr class="row-odd"></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="onap-blueprints-and-environments">
+<h2>ONAP Blueprints and environments<a class="headerlink" href="#onap-blueprints-and-environments" title="Permalink to this headline">¶</a></h2>
+<p>ONAP is able to deploy and operate VNFs running OpenStack based Centralized
+Private Cloud Instances, as well as Mobile Edge Cloud instances.
+ONAP has been tested in the following network environments:</p>
+<ul class="simple">
+<li><p>Voice Over LTE (VoLTE)</p></li>
+<li><p>Customer Premise Equipment (CPE)</p></li>
+<li><p>5G</p></li>
+<li><p>Cross Domain and Cross Layer VPN (CCVPN)</p></li>
+<li><p>Broadband Service (BBS)</p></li>
+</ul>
+</div>
+<div class="section" id="licenses">
+<h2>Licenses<a class="headerlink" href="#licenses" title="Permalink to this headline">¶</a></h2>
+<p>Open Network Automation Platform (ONAP) is an open source project hosted by the
+Linux Foundation.</p>
+<p>ONAP Source Code is licensed under the <a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">Apache Version 2 License</a>.
+ONAP Documentation is licensed under the <a class="reference external" href="http://creativecommons.org/licenses/by/4.0">Creative Commons Attribution 4.0
+International License</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Sherin Daher
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

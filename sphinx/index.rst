@@ -58,7 +58,7 @@ Please find some guidance here on the content of ONAP documentation:
    :maxdepth: 1
    :hidden:
 
-   Home <self>
+   
    release/index
    guides/overview/index
    guides/onap-developer/architecture/index
