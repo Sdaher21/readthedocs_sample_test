@@ -101,8 +101,8 @@ microservices-based platform components.**
 
 
 .. figure:: images/ONAP-architecture.png
-   :scale: 50 %
-   :alt: map to buried treasure
+   :alt: Hierarchy between plugins
+   :align: center
 
 
 Figure 2 below, provides a simplified functional view of the architecture,
