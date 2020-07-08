@@ -1,7 +1,7 @@
-.. _release-notes:
-
+***********************
 Frankfurt Release Notes
-^^^^^^^^^^^^^^^^^^^^^^^
+***********************
+
 
 This page provides the release notes for the ONAP Frankfurt release. This
 includes details of software versions, known limitations, and outstanding
