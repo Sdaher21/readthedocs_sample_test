@@ -99,8 +99,10 @@ as functions for managing ONAP itself.
 **Figure 1 provides a high-level view of the ONAP architecture with its
 microservices-based platform components.**
 
-..  image:: ONAP-architecture.png
-   :width: 800px
+
+.. figure:: ONAP-architecture.png
+   :scale: 50 %
+   :alt: map to buried treasure
 
 
 Figure 2 below, provides a simplified functional view of the architecture,
