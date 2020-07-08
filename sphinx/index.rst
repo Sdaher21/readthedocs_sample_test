@@ -59,7 +59,7 @@ Please find some guidance here on the content of ONAP documentation:
    :hidden:
 
    
-   release/index
-   guides/overview/index
-   guides/onap-developer/architecture/index
+   Release_Notes.rst
+   Open_Network_Automation_Platform_Overview.rst
+   ONAP_Architecture.rst
    
