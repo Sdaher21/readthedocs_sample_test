@@ -62,9 +62,4 @@ Please find some guidance here on the content of ONAP documentation:
    release/index
    guides/overview/index
    guides/onap-developer/architecture/index
-   guides/onap-developer/developing/index
-   guides/onap-operator/index
-   guides/onap-user/index
-   guides/onap-developer/index
-   guides/onap-provider/index
-   guides/active-projects/index
+   
