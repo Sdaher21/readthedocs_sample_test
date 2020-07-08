@@ -677,21 +677,21 @@ Resources
 =========
 See the Resources page on `ONAP.org <https://www.onap.org/resources>`_
 
-.. |image1| image:: media/ONAP-architecture.png
+.. |image1| image:: images/ONAP-architecture.png
    :width: 800px
-.. |image2| image:: media/ONAP-fncview.png
+.. |image2| image:: images/ONAP-fncview.png
    :width: 800px
-.. |image3| image:: media/ONAP-closedloop.png
+.. |image3| image:: images/ONAP-closedloop.png
    :width: 800px
-.. |image4| image:: media/ONAP-5G.png
+.. |image4| image:: images/ONAP-5G.png
    :width: 800px
-.. |image5| image:: media/ONAP-vcpe.png
+.. |image5| image:: images/ONAP-vcpe.png
    :width: 800px
-.. |image6| image:: media/ONAP-bbs.png
+.. |image6| image:: images/ONAP-bbs.png
    :width: 800px
-.. |image7| image:: media/ONAP-volte.png
+.. |image7| image:: images/ONAP-volte.png
    :width: 800px
-.. |image8| image:: media/ONAP-ccvpn.png
+.. |image8| image:: images/ONAP-ccvpn.png
    :width: 800px
-.. |image9| image:: media/ONAP-mdons.png
+.. |image9| image:: images/ONAP-mdons.png
    :width: 800px
