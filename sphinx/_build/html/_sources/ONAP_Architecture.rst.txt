@@ -100,8 +100,8 @@ as functions for managing ONAP itself.
 microservices-based platform components.**
 
 
-.. figure:: images/ONAP-architecture.png
-   :alt: Hierarchy between plugins
+.. figure:: images/ONAP_architecture.png
+   :alt: ONAP Architecture
    :align: center
 
 
