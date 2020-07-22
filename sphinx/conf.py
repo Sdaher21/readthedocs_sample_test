@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Sample Project'
-copyright = '2020, Sherin Daher'
-author = 'Sherin Daher'
+project = 'ONAP Architecture'
+copyright = '2020'
+author = 'ONAP'
 master_doc = 'index'
 
 
