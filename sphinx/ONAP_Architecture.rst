@@ -128,7 +128,8 @@ which highlights the role of a few key components:
    the topology, workflow, and policy models from a number of SDOs including
    ETSI NFV MANO, TM Forum SID, ONF Core, OASIS TOSCA, IETF, and MEF.
 
-|image2|
+.. image:: images/ONAP-fncview.jpg
+   :width: 800px
 
 **Figure 2. Functional view of the ONAP architecture**
 
@@ -678,8 +679,7 @@ Resources
 See the Resources page on `ONAP.org <https://www.onap.org/resources>`_
 
 
-.. |image2| image:: images/ONAP-fncview.png
-   :width: 800px
+
 .. |image3| image:: images/ONAP-closedloop.png
    :width: 800px
 .. |image4| image:: images/ONAP-5G.jpg
