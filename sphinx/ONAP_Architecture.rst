@@ -686,7 +686,7 @@ See the Resources page on `ONAP.org <https://www.onap.org/resources>`_
    :width: 800px
 .. |image3| image:: images/ONAP-closedloop.png
    :width: 800px
-.. |image4| image:: images/ONAP-5G.png
+.. |image4| image:: images/ONAP-5G.jpg
    :width: 800px
 .. |image5| image:: images/ONAP-vcpe.png
    :width: 800px
