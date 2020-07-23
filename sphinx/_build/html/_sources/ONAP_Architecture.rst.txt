@@ -1,5 +1,5 @@
 ****************************
-ONAP Architecture version 1
+ONAP Architecture Version 1
 ****************************
 
 Introduction
