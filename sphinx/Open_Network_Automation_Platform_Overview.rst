@@ -118,14 +118,6 @@ These service design activities are built up of the following subtasks:
   b. Defining orchestration steps
   c. Selecting valid cloud region
   d. Service orchestration calling cloud APIs to deploy VNFs
-
-     The onboarding and instantiation of VNFs in ONAP is represented via
-     the example of onboarding and instantiating a virtual network function
-    (VNF), the virtual Firewall (vFirewall). Following the guidelines and
-     steps of this example, any other VNF can be similarly onboarded
-     and instantiated to ONAP. See :ref:`virtual Firewall Onboarding and
-     Instantiating <vfirewall_usecase>` examples.
-
   e. Controllers applying configuration on VNFs
 
 3. **Service operations**
