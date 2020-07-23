@@ -396,7 +396,8 @@ they will raise an alarm but require human intervention before executing the
 change. The policy framework is extended to support additional policy decision
 capabilities with the introduction of adaptive policy execution.
 
-|image3|
+.. image:: images/ONAP-closedloop.jpg
+   :width: 800px
 
 **Figure 3: ONAP Closed Control Loop Automation**
 
@@ -502,7 +503,8 @@ subscriber at a significantly lower cost to the operator. In this blueprint,
 ONAP supports complex orchestration and management of open source VNFs and both
 virtual and underlay connectivity.
 
-|image5|
+.. image:: images/ONAP-vcpe.jpg
+   :width: 800px
 
 **Figure 5. ONAP vCPE Architecture**
 
@@ -521,7 +523,9 @@ broadband services.  It further shows how ONAP can orchestrate services across
 different locations (e.g. Central Office, Core) and technology domains (e.g.
 Access, Edge).
 
-|image6|
+.. image:: images/ONAP-bbs.jpg
+   :width: 800px
+
 
 **Figure 6. ONAP BBS Architecture**
 
@@ -543,7 +547,8 @@ termination and manual scaling) and FCAPS (fault, configuration, accounting,
 performance, security) management. This blueprint also shows advanced
 functionality such as scaling and change management.
 
-|image7|
+.. image:: images/ONAP-volte.jpg
+   :width: 800px
 
 **Figure 7. ONAP VoLTE Architecture Open Network Automation Platform**
 
@@ -563,7 +568,8 @@ high-speed OTN (Optical Transport Networks) across carrier networks. They also
 want to provide a high-speed, flexible and intelligent service for high-value
 customers, and an instant and flexible VPN service for SMB companies.
 
-|image8|
+.. image:: images/ONAP-ccvpn.jpg
+   :width: 800px
 
 **Figure 8. ONAP CCVPN Architecture**
 
@@ -600,7 +606,8 @@ end-to-end service. The MDONS blueprint created by AT&T, Orange, and Fujitsu
 solves the above problem. MDONS and CCVPN used together can solve the OTN
 automation problem in a comprehensive manner.
 
-|image9|
+.. image:: images/ONAP-mdons.jpg
+   :width: 800px
 
 **Figure 9. ONAP MDONS Architecture**
 
@@ -680,17 +687,4 @@ See the Resources page on `ONAP.org <https://www.onap.org/resources>`_
 
 
 
-.. |image3| image:: images/ONAP-closedloop.png
-   :width: 800px
-.. |image4| image:: images/ONAP-5G.jpg
-   :width: 800px
-.. |image5| image:: images/ONAP-vcpe.png
-   :width: 800px
-.. |image6| image:: images/ONAP-bbs.png
-   :width: 800px
-.. |image7| image:: images/ONAP-volte.png
-   :width: 800px
-.. |image8| image:: images/ONAP-ccvpn.png
-   :width: 800px
-.. |image9| image:: images/ONAP-mdons.png
-   :width: 800px
+
