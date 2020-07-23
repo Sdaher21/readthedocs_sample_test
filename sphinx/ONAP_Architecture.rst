@@ -678,7 +678,7 @@ Resources
 =========
 See the Resources page on `ONAP.org <https://www.onap.org/resources>`_
 
-.. |image1| image:: images/ONAP-architecture.jpeg
+.. |image1| image:: images/ONAP-architecture.jpg
    :width: 800px
 .. |image2| image:: images/ONAP-fncview.png
    :width: 800px
