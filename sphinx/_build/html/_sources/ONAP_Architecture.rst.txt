@@ -102,6 +102,8 @@ microservices-based platform components.**
 
 |image1|
 
+**Figure 1. Functional view of the ONAP architecture**
+
 
 Figure 2 below, provides a simplified functional view of the architecture,
 which highlights the role of a few key components:

@@ -48,7 +48,7 @@ ONAPâ€™s major activities, that is designing, deploying and operating
 services, are provided based on ONAPâ€™s two major frameworks, namely on
 Design-time framework and Run-time framework:
 
-.. image:: media/ONAP_main_functions.png
+.. image:: images/ONAP-main-functions.png
     :scale: 40 %
 
 In order to design, deploy and operate services and assure these dynamic
