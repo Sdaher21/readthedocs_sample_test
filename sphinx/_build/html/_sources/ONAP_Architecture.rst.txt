@@ -1,6 +1,6 @@
-*****************
+****************************
 ONAP Architecture version 1
-*****************
+****************************
 
 Introduction
 ============
@@ -427,8 +427,6 @@ requirements of various use cases, guide the development and bring consistency
 among ONAP components and explore a common model to improve the
 interoperability of ONAP.
 
-ONAP supports various models detailed in
-:ref:`Modeling Documentation<onap-modeling-modelspec:master_index>`.
 
 The modeling project includes the ETSI catalog component, which provides the
 parser functionalities, as well as additional package management
@@ -479,7 +477,8 @@ These requirements have led to the five above-listed initiatives and have been
 developed in close cooperation with other standards and open source
 organizations such as 3GPP, TM Forum, ETSI, and O-RAN Software Community.
 
-|image4|
+.. image:: images/ONAP-5G.jpg
+   :width: 800px
 
 **Figure 4. End-to-end 5G Service**
 
@@ -619,8 +618,7 @@ Verified end to end tests
 =========================
 Use cases
 ---------
-Various use cases have been tested for the Release. Detailed information can
-be found in :ref:`Verified Use Cases<onap-integration:docs_usecases>`.
+
 
 - vFirewall with closed loop
 - vFirewall/vDNS with HPA
@@ -637,9 +635,7 @@ be found in :ref:`Verified Use Cases<onap-integration:docs_usecases>`.
 
 Functional requirements
 -----------------------
-Various functional requirements  have been tested for the Release. Detailed
-information can be found in
-:ref:`Verified Use Cases<onap-integration:docs_usecases>`.
+Various functional requirements  have been tested for the Release.
 
 - PNF Software Upgrade using direct Netconf Yang interface with PNF
 - PNF Software Upgrade with EM with Ansible
